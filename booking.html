@@ -2,17 +2,24 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
+        <script src="booking.js"></script>
         <title>Bookings</title>
     </head>
     <body>
         <div class="booking_texts">Booking options :</div>
         <select id="group_size" name="group_size" size="2">
             <option value="small">Small (10 - 15 people)</option>
-            <option value="small">Standard (35 - 40 people)</option>
+            <option value="standard">Standard (35 - 40 people)</option>
         </select>
         <form class="form">
             <input type="checkbox" id="join_land">
             <label class="booking_texts" for="join_land">Wants to buy tickets on my own.</label><br>
+            <div class="booking_texts">Desired destination : </div>
+            <select id="group_size" name="group_size" size="3">
+                <option value="big_buddha">Big Buddha</option>
+                <option value="khao_tapu">Khao Tapu</option>
+                <option value="phuket_old_town">Phuket Old Town</option>
+            </select>
             <div class="booking_texts">Number of travellers</div>
             <input type="number" id="members" placeholder="Number of travellers">
             <div class="booking_texts">Buyer's name</div>
@@ -20,6 +27,7 @@
             <div class="booking_texts">Telephone number</div>
             <input type="tel" id="telnum" placeholder="Telephone number">
         </form>
+        <input class="submit_button" type="button" value="Submit" onclick="verifyConfirmation()">
         <footer>
             <div id="student_name_2">Rathanon Makaramanee</div>
             <div id="student_id_2">6733216621</div>
